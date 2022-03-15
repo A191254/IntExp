@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "239138648710",
+    "project_id": "intexp-beca9",
+    "storage_bucket": "intexp-beca9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239138648710:android:c3c67786b8d7bd9f281707",
+        "android_client_info": {
+          "package_name": "com.example.intexp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239138648710-upb0c416e6m3r1sg9gjj30ehvcdcm9lj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.intexp",
+            "certificate_hash": "8b8802fa7b2e487dd4120beb04f4546bc169aa13"
+          }
+        },
+        {
+          "client_id": "239138648710-4jf53v1an6imrft79at9jq3bf6ts8tdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiD76y_CKsQC-7qAJ9QOD0Z_NWgA-NaSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239138648710-4jf53v1an6imrft79at9jq3bf6ts8tdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

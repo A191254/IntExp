@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp">
+
+
+    <View
+        android:id="@+id/viewColorTag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/white"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/IEtxtCompanyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:text="MORGAN STANELY"
+                    android:visibility="visible"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/IEtxtStipend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:maxWidth="150dp"
+                    tools:text="Stipend/CTC-80000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/IEtxtType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:maxWidth="150dp"
+                    tools:text="INTERNSHIP"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/IEtxtRounds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:maxWidth="150dp"
+                    tools:text="No of Rounds - 3"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear2"
+                android:layout_below="@id/linear1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/IEtxtExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:lines="20"
+                    tools:text="Round 1: This round consists of two sections, one is Aptitude section and other one is Coding.
+
+In aptitude section, there were basic questions, anyone can solve it.
+In Coding section, two questions were there one is of Java and other, is of Python.
+You need to solve anyone of them, but for safe side, try to solve both.
+Round 2: This round is interview round. For me, the interview was virtual because of Covid-19. In this they asked me about some managerial questions i.e. HR Questions and some basic coding questions.
+
+Round 3: This round is video round. In this, we have to orally answer the questions as a record and submit video kind of thing. The questions are related to HR i.e. managerial questions.
+
+After 1 week, I got my result, Selected!
+I joined the training in mid of July. They train us in popular technologies that are currently in-demand in companies.
+So, When the training is completed, they schedule our interview with their Client Company (Morgan Stanley in my case).
+They ask questions from what we have learnt in the training programs. That’s it.
+I got the result in 5-6 days, Selected!!!"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linear3"
+                android:layout_below="@id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/IEtxtAuthor"
+                    tools:text="~Atharv Wani"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_below="@id/linear3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/IEtxtTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="My Suggestions/Tips"
+                    android:lines="3"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
