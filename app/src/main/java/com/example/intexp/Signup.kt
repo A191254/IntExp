@@ -26,12 +26,31 @@ class Signup : AppCompatActivity() {
 
         binding.signUpBtn.setOnClickListener {
             Log.d(TAG, "onCreate: signupbtnclicked")
-            Toast.makeText(this,"Enter a Valid Email-Address",Toast.LENGTH_LONG).show()
             val email = binding.usernameEt.text.toString().trim()
             val password = binding.passwordEt.text.toString().trim()
             //auth.createUserWithEmailAndPassword(email, password)
             //Toast.makeText(this,"Clicked",Toast.LENGTH_LONG).show()
-            createAccount(email, password)
+            if(email.isEmpty()){
+                Toast.makeText(this,"Please Enter Email-ID",Toast.LENGTH_SHORT).show()
+            }
+            else if(password.isEmpty()){
+                Toast.makeText(this,"Please Enter Password",Toast.LENGTH_SHORT).show()
+            }
+            else {
+                var k=0;
+                for(i in email.indices){
+                    if(email[i]=='@') {
+                        ++k;
+                        if(email.subSequence(i+1,i+5)!="rvce")
+                            Toast.makeText(this,"Please Use RVCE Email-ID",Toast.LENGTH_SHORT).show()
+                    }
+                    if(email[i]=='.')
+                        ++k;
+                }
+                if(k==4)
+                    createAccount(email, password)
+
+            }
 
             //startActivity(Intent(this, Makeprofile::class.java))
         }
@@ -45,14 +64,14 @@ class Signup : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
+                    Toast.makeText(baseContext, "Your Account is created ! ", Toast.LENGTH_SHORT).show()
                     val user = auth.currentUser
                     updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Log.d(TAG, "createAccount: failed")
-                    Toast.makeText(baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Create Account failed. Try Again ! ", Toast.LENGTH_SHORT).show()
                 }
             }
         // [END create_user_with_email]

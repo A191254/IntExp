@@ -26,16 +26,19 @@ class Postnotification : AppCompatActivity() {
         val ref1 = FirebaseDatabase.getInstance().getReference("/NotificationDetails/")
 
         val notificationdetail = NotificationDetails(
+            uid!!,
             binding.PNCompanyNameEt.text.toString(),
             binding.PNOpportunityEt.text.toString(),
-            binding.PNStipendEt.text.toString().toInt(),
+            binding.PNStipendEt.text.toString(),
             binding.PNEligiblityEt.text.toString(),
             binding.PNJobProfileEt.text.toString(),
+            binding.PNDateEt.text.toString()
         )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
 
-        ref1.child("$uid").setValue(notificationdetail)
+        //ref1.child("$uid").setValue(notificationdetail)
+        ref1.push().setValue(notificationdetail)
     }
 }
-data class NotificationDetails(val CompanyName: String?=null, val Opportunity: String?=null, val Stipend: Int?=null,
+data class NotificationDetails(val Uid:String,val CompanyName: String?=null, val Opportunity: String?=null, val Stipend: String?=null,
                                val Eligiblity: String?=null, val JobProfile: String?=null, val Date: String?=null)

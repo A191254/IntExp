@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Makeprofile"
-    android:background="@drawable/grass">
+    tools:context=".Makeprofile">
 
 
     <ImageView
@@ -79,15 +78,42 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <RadioGroup
+        android:id="@+id/rg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/LocationTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbsenior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senior">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rbjunior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Junior">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rbspc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SPC">
+        </RadioButton>
+    </RadioGroup>
+
 
     <Button
         android:id="@+id/registerme"
-        android:layout_below="@id/LocationTil"
-        android:text="REGISTER ME"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg"
         android:layout_centerVertical="true"
         android:layout_centerInParent="true"
-        android:layout_height="wrap_content"/>
+        android:text="REGISTER ME" />
 
 
 </RelativeLayout>

@@ -20,12 +20,15 @@
             android:name=".Postexperience"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.IntExp.NoActionBar"
             android:name=".Notification"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.IntExp.NoActionBar"
             android:name=".News"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.IntExp.NoActionBar"
             android:name=".Experience"
             android:exported="false" />
         <activity
@@ -35,6 +38,7 @@
             android:name=".Signup"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.IntExp.NoActionBar"
             android:name=".Login"
             android:exported="true">
             <intent-filter>

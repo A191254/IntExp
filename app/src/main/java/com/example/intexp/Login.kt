@@ -53,7 +53,27 @@ class Login : AppCompatActivity() {
         binding.loginBtn.setOnClickListener{
             email = binding.usernameEt.text.toString().trim()
             password = binding.passwordEt.text.toString().trim()
-            signIn(email,password)
+            if(email.isEmpty()){
+                Toast.makeText(this,"Please Enter Email-ID",Toast.LENGTH_SHORT).show()
+            }
+            else if(password.isEmpty()){
+                Toast.makeText(this,"Please Enter Password",Toast.LENGTH_SHORT).show()
+            }
+            else {
+                var k=0;
+                for(i in email.indices){
+                    if(email[i]=='@') {
+                        ++k;
+                        if(email.subSequence(i+1,i+5)!="rvce")
+                            Toast.makeText(this,"Please Use RVCE Email-ID",Toast.LENGTH_SHORT).show()
+                    }
+                    if(email[i]=='.')
+                        ++k;
+                }
+                if(k==4)
+                    signIn(email,password)
+            }
+
         }
 
         binding.signInbutton.setOnClickListener {

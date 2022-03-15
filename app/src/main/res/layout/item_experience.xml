@@ -9,20 +9,6 @@
     android:elevation="10dp"
     app:cardCornerRadius="10dp">
 
-
-    <View
-        android:id="@+id/viewColorTag"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginStart="5dp"
-        android:background="@android:color/white"
-        android:paddingBottom="5dp">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,60 +28,60 @@
                     android:id="@+id/IEtxtCompanyName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
                     android:layout_weight="1"
                     android:ellipsize="end"
+                    android:gravity="center"
                     android:maxLines="1"
+                    android:textAlignment="center"
                     android:textColor="@android:color/black"
-                    android:textSize="25sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    tools:text="MORGAN STANELY"
                     android:visibility="visible"
-                    android:textAlignment="center"/>
+                    tools:text="MORGAN STANELY" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:id="@+id/IEtxtStipend"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:maxWidth="150dp"
-                    tools:text="Stipend/CTC-80000"
-                    android:textSize="18sp" />
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Stipend/CTC-80000" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:id="@+id/IEtxtType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:maxWidth="150dp"
-                    tools:text="INTERNSHIP"
-                    android:textSize="18sp" />
+                    android:maxLines="1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="INTERNSHIP" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:id="@+id/IEtxtRounds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:maxWidth="150dp"
-                    tools:text="No of Rounds - 3"
-                    android:textSize="18sp" />
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="No of Rounds - 3" />
 
             </LinearLayout>
             <LinearLayout
@@ -161,6 +147,6 @@ I got the result in 5-6 days, Selected!!!"/>
 
         </RelativeLayout>
 
-    </RelativeLayout>
+
 
 </com.google.android.material.card.MaterialCardView>

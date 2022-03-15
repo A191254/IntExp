@@ -35,11 +35,12 @@ class Postexperience : AppCompatActivity() {
 //            }
 //        }
         val experiencedetail = ExperienceDetails(
+            uid!!,
             contributorname,
             binding.PECompanyNameEt.text.toString(),
             binding.PEOpportunityEt.text.toString(),
-            binding.PEStipendEt.text.toString().toInt(),
-            binding.PERoundsEt.text.toString().toInt(),
+            binding.PEStipendEt.text.toString(),
+            binding.PERoundsEt.text.toString(),
             binding.PEExperienceEt.text.toString(),
             binding.PETipsEt.text.toString(),
             binding.PEContactEt.text.toString()
@@ -47,7 +48,8 @@ class Postexperience : AppCompatActivity() {
         )
         //Log.d("TAGLOG", "saveCropToFirebaseDatabase: $name $location $weight $amount $note $date")
         //Log.d("okkkkkkkkkk", "saveCropToFirebaseDatabase: $experiencedetail")
-        ref1.child("$uid").setValue(experiencedetail)
+        ref1.push().setValue(experiencedetail)
     }
 }
-data class ExperienceDetails(val ContributorName: String?=null, val Company: String?=null, val Opportunity: String?=null, val Stipend: Int?=null, val Rounds: Int?=null, val Experience: String?=null, val Tips: String?=null, val Contact: String?=null)
+data class ExperienceDetails(val Uid: String,val ContributorName: String?=null, val Company: String?=null, val Opportunity: String?=null
+                             , val Stipend: String?=null, val Rounds: String?=null, val Experience: String?=null, val Tips: String?=null, val Contact: String?=null)
